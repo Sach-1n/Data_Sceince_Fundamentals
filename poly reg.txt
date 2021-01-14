@@ -1,0 +1,48 @@
+import numpy as np
+
+X = np.array(range(9))
+X = X.reshape(3,3)
+
+A = np.array(range(3))
+A = A.reshape(1,3)
+
+Y = np.array(range(3))
+Y = Y.reshape(1,3)
+
+n = len(x)
+sumx1 = 0
+sumx2 = 0
+sumx3 = 0
+sumx4 = 0
+
+for i in x:
+    sumx1 += i
+    sumx2 += pow(i,2)
+    sumx3 += pow(i,3)
+    sumx4 += pow(i,4)
+
+X[0][0] = n
+X[0][1] = sumx1
+X[0][2] = sumx2
+X[1][0] = sumx1
+X[1][1] = sumx2
+X[1][2] = sumx3
+X[2][0] = sumx2
+X[2][1] = sumx3
+X[2][2] = sumx4
+
+
+sumy1 = 0
+sumx1y1 = 0
+sumx2y1 = 0
+for i,v in enumerate(y):
+    sumy1 += v
+    sumx1y1 += v*x[i]
+    sumx2y1 += v*pow(x[i],2)
+
+Y[0][0] = sumy1
+Y[0][1] = sumx1y1
+Y[0][2] = sumx2y1
+
+X
+
